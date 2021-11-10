@@ -3,10 +3,10 @@ jobs:
   build:
     docker:
       - image: circleci/php:7.3-node-browsers
-      - iamge: circleci/postgres:11.6-alpine
+      - image: circleci/postgres:11.6-alpine
         environment:
           POSTGRES_DB: larasns
-          POSTGRES_USER: dafault
+          POSTGRES_USER: default
           POSTGRES_PASSWORD: secret
     environment:
       APP_ENV: testing
@@ -14,7 +14,7 @@ jobs:
       DB_HOST: localhost
       DB_PORT: 5432
       DB_DATABASE: larasns
-      DB_USERNAME: dafault
+      DB_USERNAME: default
       DB_PASSWORD: secret
     steps:
       - checkout
